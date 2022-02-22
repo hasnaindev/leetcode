@@ -9,8 +9,8 @@
   ['L', 50],
   ['C', 100],
   ['D', 500],
-  ['M', 1000],
-]);
+  ['M', 1000]
+])
 
 /**
  * Converts a roman number into an
@@ -23,7 +23,7 @@ const romanToInt = str => {
   if (str.length <= 1)
     return romanNumbersMap.get(str)
 
-  let result = 0;
+  let result = 0
 
   for (let i = str.length - 1; i >= 0; i--) {
     const numberOne = romanNumbersMap.get(str[i])
@@ -38,11 +38,3 @@ const romanToInt = str => {
 
   return result
 }
-
-console.log(romanToInt('MCMXCIV'))
-
-/**
-  Input: s = "MCMXCIV"
-  Output: 1994
-  Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
-*/
