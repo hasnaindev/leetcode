@@ -1,31 +1,4 @@
 /**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-
-class ListNode {
-  constructor (val, next) {
-    this.val = val === undefined ? 0 : val
-    this.next = next === undefined ? null : next
-  }
-
-  static print (list) {
-    const buffer = []
-    let current = list
-
-    while (current) {
-      buffer.push(current.val)
-      current = current.next
-    }
-
-    console.log(buffer.toString())
-  }
-}
-
-/**
  * @param {ListNode} list1
  * @param {ListNode} list2
  * @return {ListNode}
@@ -93,23 +66,3 @@ const mergeTwoLists = (list1, list2) => {
 
   return head
 }
-
-// const list1 = new ListNode(1, new ListNode(2, new ListNode(4)))
-// const list2 = new ListNode(1, new ListNode(3, new ListNode(4)))
-
-const list1 = undefined
-const list2 = new ListNode(0)
-
-ListNode.print(
-  mergeTwoLists(
-    undefined,
-    new ListNode(0)
-  )
-)
-
-ListNode.print(
-  mergeTwoLists(
-    new ListNode(1, new ListNode(2, new ListNode(4))),
-    new ListNode(1, new ListNode(3, new ListNode(4)))
-  )
-)
